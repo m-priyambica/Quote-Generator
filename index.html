@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Quote Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Body Styling */
+        body {
+            background: #ff5e62; /* Beautiful background */
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+
+        /* Main Container */
+        .container {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 12px;
+            max-width: 500px;
+            width: 90%;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
+            color: white;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .container:hover {
+            transform: scale(1.05);
+        }
+
+        /* Heading */
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        /* Quote Text */
+        #quote {
+            font-size: 1.4rem;
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+
+        /* Author */
+        #author {
+            font-size: 1rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        /* Button */
+        button {
+            background-color: white;
+            color: #ff5e62;
+            padding: 12px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #ff2e4e;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Random Quote Generator</h2>
+        <p id="quote">Click the button to get a new quote!</p>
+        <h4 id="author"></h4>
+        <button onclick="getQuote()">Get Quote</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
